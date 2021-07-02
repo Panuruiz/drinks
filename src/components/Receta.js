@@ -4,9 +4,13 @@ import { ModalContext } from "../context/ModalContext";
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
 
+function rand() {
+  return Math.round(Math.random() * 20) - 10;
+}
+
 function getModalStyle() {
-  const top = 50;
-  const left = 50;
+  const top = 50 + rand();
+  const left = 50 + rand();
 
   return {
     top: `${top}%`,
@@ -18,8 +22,10 @@ function getModalStyle() {
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: "absolute",
-    width: 450,
+    width: 400,
+    overflow: "scroll",
     backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },

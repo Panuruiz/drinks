@@ -52,7 +52,7 @@ const Formulario = () => {
             name="nombre"
             className="form-control"
             type="text"
-            placeholder="Buscar por Ingrediente"
+            placeholder="Search by Ingredient"
             onChange={obtenerDatosReceta}
           />
         </div>
@@ -62,7 +62,7 @@ const Formulario = () => {
             name="categoria"
             onChange={obtenerDatosReceta}
           >
-            <option value="">-- Selecciona Categoría --</option>
+            <option value="">-- Choose a Category --</option>
             {categorias.map((categoria) => (
               <option key={categoria.strCategory} value={categoria.strCategory}>
                 {categoria.strCategory}
